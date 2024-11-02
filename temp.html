@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وايت ماء وسط الرياض</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* RTL and Color Scheme */
+        body {
+            background-color: #e6f7ff;
+            color: #003366;
+            direction: rtl;
+        }
+
+        header,
+        footer {
+            background-color: #003366;
+            color: #ffffff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url("./hero3.jpg") center/cover;
+            color: black;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            background-color: #0066cc;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        #services {
+            position: relative;
+            padding: 50px 0;
+        }
+
+        /* Image Slider */
+        .slider {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Slider Navigation */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            font-size: 24px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            transform: translateY(-50%);
+            border-radius: 50%;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        #about img {
+            width: 50%;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        #contact p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        footer {
+            padding: 1em 0;
+        }
+    </style>
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = slides.childElementCount;
+            currentSlide = (index + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>وايت ماء وسط الرياض</h1>
+        <nav>
+            <a href="#services">خدماتنا</a>
+            <a href="#about">من نحن</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+    <!-- class="hero" -->
+    <section class="hero">
+        <h2>نوصلكم بمياه نقية</h2>
+        <p>خدمة توصيل مياه نقية ومنعشة، في أي وقت تحتاجون إليه
+            <br /> تحت الطلب ٢٤ ساعة.
+        </p>
+        <button onclick="location.href='#contact'">اطلب الآن</button>
+    </section>
+
+    <section id="services">
+        <h2>خدماتنا</h2>
+        <p>
+            <br />تقوم وايت مياه بالرياض بتوفير جميع خدمات مياه الشرب كما أنها قادرة على توفير ونقل 20 طن كما يظهر في
+            الصور
+            وتتميز وايت ماء بنقل المياه في وسط الرياض كما أنها قادرة على نقل المياه وتوصيلها إلى المنازل والشركات
+            وكذلك المسابح والمباني <br /> كما انها قادرة على توفير ونقل المياه كما انها تستطيع ان توفر مياه صالحة للشرب
+            والبناء
+            والكثير من الأغراض المختلفة.
+        </p>
+        <div class="slider">
+            <div class="slides">
+                <img src="./ww1.jpg" alt="شاحنة توصيل المياه">
+                <img src="./ww2.jpg"alt="شاحنة توصيل المياه">
+                <img src="./ww3.jpg" alt="شاحنة توصيل المياه">
+                <img src="./ww4.jpeg" alt="شاحنة توصيل المياه">
+            </div>
+            <!-- <div class="nav-btn prev" onclick="showSlide(currentSlide - 1)">&#10094;</div> -->
+            <!-- <div class="nav-btn next" onclick="showSlide(currentSlide + 1)">&#10095;</div> -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>من نحن</h2>
+        <img src="./ww.jpg" alt="White Water Truck">
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>حلولنا متكاملة وتوفر عليك الوقت والمجهود ونوفر لك جميع احجام وايتات الموية ونقوم بتوصيلها الي جميع
+                    مناطق الرياض</p>
+            </li>
+            <li>
+                <p>
+                    وايت ماء بالرياض لدينا متخصصون في توصيل الوايتات ذات مقاسات مختلفة حتى نتمكن من تنفيذ المقاس المناسب
+                    له، كل ذلك يتم بمنتهى الاحترافية
+                </p>
+            </li>
+            <li>
+                <p>
+                    يوجد وايت مياه صالحة للشرب والمسابح متوافر لدينا أحجام متعددة من الوايتات، هدفنا الأساسي هو الحصول
+                    على مياه صالحة للاستخدام، بدون بذل أي مجهود أو وقت لتوفير الخدمة المطلوبة.
+                </p>
+            </li>
+        </ul>
+        <br />
+        <h2>
+            مميزات وايت ماء وسط الرياض
+        </h2>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>
+                    تقوم وايت مياه في وسط الرياض بالقيام بتوصيل مياه الشرب وتوزيعها على السكان.
+                </p>
+            </li>
+            <li>
+                <p>
+                    تستطيع وايت نقل مياه المباني تحت الإنشاء بتوفير المياه إلى المباني التي مازالت تحت الإنشاء.
+                </p>
+            </li>
+            <li>
+                <p>
+                    تقوم وايت بتوفير مياه شرب بأفضل الأسعار الممكنة واعلى خدمة وكفاءة.
+                </p>
+            </li>
+
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>تواصل معنا</h2>
+        <p>الهاتف (966+): 0546808401, 0541027410</p>
+        <p>العنوان: وسط الرياض, الملز السلمانيه حي المربع حي الوزراء</p>
+        <p>البريد الإلكتروني: info@purewaterdelivery.com</p>
+    </section>
+
+    <footer>
+        <p>© 2024 وايت ماء وسط الرياض. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+
+</html>
